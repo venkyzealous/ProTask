@@ -1,0 +1,16 @@
+A clean, responsive, and interactive Kanban board where users can manage tasks through different stages (e.g., To Do, In Progress, Done).
+
+Core Features:
+
+Create, edit, and delete tasks (cards).
+Create and reorder columns.
+Drag and drop tasks between columns.
+Drag and drop columns themselves.
+Persist the board state to the browser's local storage.
+Tech Stack:
+
+Framework: React (using Vite for a fast and modern setup)
+Styling: Tailwind CSS for a professional and utility-first design.
+Drag & Drop: @dnd-kit - A modern, accessible, and powerful library for drag and drop.
+Icons: react-icons for adding icons easily.
+State Management: zustand - A simple, fast, and scalable state management solution.
