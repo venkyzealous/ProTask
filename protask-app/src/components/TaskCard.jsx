@@ -4,7 +4,15 @@ import { CgTrash } from 'react-icons/cg';
 import { useStore } from '../store';
 
 export function TaskCard({ task }) {
-    const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id: task.id, type: 'Task' });
+    const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
+        id: task.id,
+        // THIS IS THE CRITICAL FIX: We must wrap the task's info in a `data` object
+        // so the drag-and-drop context knows what it is.
+        data: {
+            type: 'Task',
+            task: task,
+        },
+    });
     const deleteTask = useStore(state => state.deleteTask);
 
     const style = {
